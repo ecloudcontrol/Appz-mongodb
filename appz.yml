@@ -23,13 +23,6 @@ volumes:
   name: mongo-data
   size: 5Gi
   mode: ReadWriteOnce
-
-- claim: mongo-keys
-  mount: /appz/keys
-  name: mongo-keys
-  size: 1Gi
-  mode: ReadWriteOnce
-  matchLabels: false
   
 properties:
   DB_USER_ADMIN: admin
@@ -37,14 +30,4 @@ properties:
      vault: DB_USER_ADMIN_PASSWORD
   MONGO_HELICON_PASSWORD:
      vault: MONGO_HELICON_PASSWORD
-  AUTH_KEY: 
-    vault: AUTH_KEY
-  REPLICATION: 3
-  
-  MONGODB_HOST: 127.0.0.1
-  MONGODB_PORT: 27017
-  MONGO_BACKUP_DAYS: 7
-  MONGO_BACKUP_TIME: 21
-
-  MASTER_ENABLE: 'no'
   revision : 02
