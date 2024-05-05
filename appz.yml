@@ -23,6 +23,13 @@ volumes:
   name: mongo-data
   size: 5Gi
   mode: ReadWriteOnce
+
+- claim: mongo-keys
+  mount: /appz/keys
+  name: mongo-keys
+  size: 1Gi
+  mode: ReadWriteOnce
+  matchLabels: false
   
 properties:
   DB_USER_ADMIN: admin
