@@ -1,0 +1,11 @@
+users:
+  - name: helicon
+    password: $MONGO_HELICON_PASSWORD
+
+databases:
+  - name: helicondb
+
+acl:
+  - database: helicondb  
+    user: helicon
+    access: dbOwner
