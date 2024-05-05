@@ -30,4 +30,4 @@ properties:
      vault: DB_USER_ADMIN_PASSWORD
   MONGO_HELICON_PASSWORD:
      vault: MONGO_HELICON_PASSWORD
-  revision : 05
+  revision : 02
